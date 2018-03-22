@@ -12,6 +12,7 @@ import {
   View,
   ViewPagerAndroid,
   Button,
+  Image,
 } from 'react-native';
 
 import { Actions } from 'react-native-router-flux'
@@ -35,7 +36,10 @@ export default class WelcomeView extends Component<Props> {
       
         <ViewPagerAndroid style={styles.viewPager} initialPage={0}>
           <View style={[styles.container, styles.pageStyle]} key="1">
-            <Text style={styles.welcome}>Bienvenido a comeURP!</Text>
+            <Image
+            style={{width: 400, height: 400}}
+            source={{uri: 'https://s3.us-east-2.amazonaws.com/imgcomeurp/Come.png'}}
+            />
           </View>
 
           <View style={[styles.container, styles.pageStyle]} key="2">
@@ -70,6 +74,6 @@ const styles = StyleSheet.create({
   },
   pageStyle:{
     alignItems: 'center',
-    padding: 20,
+    padding: 10,
   },
 });
