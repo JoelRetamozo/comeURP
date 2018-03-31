@@ -44,7 +44,7 @@ export default class WelcomeView extends Component<Props> {
 
           <View style={[styles.container, styles.pageStyle]} key="2">
             <Text style={styles.instructions}>Los restaurantes más cercanos a la URP en un solo lugar!</Text>
-            <Button onPress={this.onPressEmpecemos} title="No le des Click Aquí!" color="#841584" accessibilityLabel="Learn more about this purple button" />
+            <Button onPress={this.onPressEmpecemos} title="Dale Click Aquí!" color="#841584" accessibilityLabel="Learn more about this purple button" />
           </View>
         </ViewPagerAndroid>
 
