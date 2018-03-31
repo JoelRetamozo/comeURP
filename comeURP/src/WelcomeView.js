@@ -12,7 +12,7 @@ import {
   View,
   ViewPagerAndroid,
   Button,
-  Image,
+  Image
 } from 'react-native';
 
 import { Actions } from 'react-native-router-flux'
@@ -24,34 +24,35 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class WelcomeView extends Component<Props> {
-  
+//type Props = {};
+export default class WelcomeView extends Component {
+
   onPressEmpecemos(){
     Actions.restaurantes()
   }
 
   render() {
     return (
-      
+
         <ViewPagerAndroid style={styles.viewPager} initialPage={0}>
           <View style={[styles.container, styles.pageStyle]} key="1">
             <Image
             style={{width: 400, height: 400}}
             source={{uri: 'https://s3.us-east-2.amazonaws.com/imgcomeurp/Come.png'}}
             />
+            <Text>asdasd 112s</Text>
           </View>
 
           <View style={[styles.container, styles.pageStyle]} key="2">
             <Text style={styles.instructions}>Los restaurantes más cercanos a la URP en un solo lugar!</Text>
             <Button onPress={this.onPressEmpecemos} title="Dale Click Aquí!" color="#841584" accessibilityLabel="Learn more about this purple button" />
           </View>
-    
+
 <View style={[styles.container, styles.pageStyle]} key="2">
             <Text style={styles.instructions}>Los restaurantes más cercanos a la URP en un solo lugar!</Text>
             <Button onPress={this.onPressEmpecemos} title="SI LE DAS CLICK TE CAGAS LA PROGRA !" color="#841584" accessibilityLabel="Learn more about this purple button" />
           </View>
-    
+          </ViewPagerAndroid>
 
     );
   }
@@ -80,5 +81,5 @@ const styles = StyleSheet.create({
   pageStyle:{
     alignItems: 'center',
     padding: 10,
-  },
+  }
 });
