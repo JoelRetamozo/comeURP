@@ -11,5 +11,10 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "comeURP";
+/**
+     * diganme si salio mi primer commit :v 
+    
+     */
+
     }
 }
